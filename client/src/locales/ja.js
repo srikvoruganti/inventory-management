@@ -6,8 +6,15 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
+    reports: 'レポート',
     companyName: '触媒コンポーネンツ',
-    subtitle: '在庫管理システム'
+    subtitle: '在庫管理システム',
+    primary: 'メインナビゲーション',
+    openMenu: 'ナビゲーションメニューを開く',
+    closeMenu: 'ナビゲーションメニューを閉じる',
+    collapseSidebar: 'サイドバーを折りたたむ',
+    expandSidebar: 'サイドバーを展開する'
   },
 
   // Dashboard
@@ -126,6 +133,29 @@ export default {
       status: 'ステータス',
       expectedDelivery: '予定配達日',
       actualDelivery: '実際の配達日'
+    },
+    submitted: {
+      title: '送信済み発注',
+      subtitle: 'サプライヤーへ送信した補充発注',
+      empty: 'まだ補充発注は送信されていません。',
+      status: '送信済み',
+      submittedDate: '送信日',
+      itemCount: '品目数',
+      totalValue: '合計金額',
+      leadTime: '納品リードタイム',
+      expectedDelivery: '予定納品日',
+      days: '{count}日',
+      viewItems: '明細を表示',
+      hideItems: '明細を隠す',
+      lineItems: {
+        sku: 'SKU',
+        name: '品目名',
+        quantity: '数量',
+        unitCost: '単価',
+        supplier: 'サプライヤー',
+        leadTime: 'リードタイム'
+      },
+      loadError: '送信済み発注の読み込みに失敗しました'
     }
   },
 
@@ -186,6 +216,68 @@ export default {
       trend: 'トレンド',
       period: '期間'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: '補充発注',
+    description: '購入予算を需要不足分に配分します',
+    budget: {
+      title: '購入予算',
+      label: '予算',
+      hint: 'このサイクルで支出する金額をドラッグして設定してください。',
+      max: '上限',
+      unused: '未使用予算'
+    },
+    recommendations: {
+      title: '推奨発注',
+      subtitle: '需要不足分の大きい順に並べています',
+      empty: '現在の予算では、最優先品目を1個も購入できません。',
+      partial: '一部',
+      partialHint: '予算がこの明細の一部しか賄えませんでした。'
+    },
+    table: {
+      sku: 'SKU',
+      itemName: '品目名',
+      supplier: 'サプライヤー',
+      currentDemand: '現在の需要',
+      forecastDemand: '予測需要',
+      shortfall: '不足数',
+      quantity: '発注数量',
+      unitCost: '単価',
+      lineTotal: '明細合計',
+      leadTime: 'リードタイム',
+      trend: 'トレンド'
+    },
+    summary: {
+      itemsSelected: '選択品目数',
+      totalUnits: '合計数量',
+      totalCost: '合計金額',
+      unusedBudget: '未使用予算',
+      leadTime: '発注リードタイム',
+      leadTimeHint: '出荷内で最も遅い品目',
+      expectedDelivery: '予定納品日'
+    },
+    excluded: {
+      title: '推奨対象外',
+      subtitle: '今回の発注に含まれなかった予測品目とその理由',
+      empty: 'すべての予測品目が現在の予算で賄われています。',
+      reason: '理由',
+      demandFalling: '需要減少',
+      overBudget: '予算超過'
+    },
+    order: {
+      place: '発注する',
+      placing: '送信中...',
+      disabledReason: '少なくとも1品目を選択できるよう予算を増やしてください。',
+      successTitle: '発注が完了しました',
+      successMessage: '注文 {orderNumber} が正常に送信されました。',
+      expectedDelivery: '予定納品日',
+      viewOrders: '注文一覧で確認',
+      dismiss: '閉じる',
+      failed: '発注の送信に失敗しました'
+    },
+    days: '{count}日'
   },
 
   // Filters
