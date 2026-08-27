@@ -321,13 +321,10 @@ export default {
   padding: 0;
 }
 
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+/* .card, .stat-card, and .badge are intentionally NOT redefined here.
+   They come from the global design system in App.vue. Scoped rules compile to
+   (0,2,0) and would outrank it, leaving this page on the old card treatment
+   while every other view moved on. */
 
 .card-header {
   margin-bottom: 1.5rem;
@@ -420,13 +417,6 @@ export default {
   margin-top: 1.5rem;
 }
 
-.stat-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #3b82f6;
-}
 
 .stat-label {
   font-size: 0.875rem;
@@ -438,28 +428,6 @@ export default {
   font-size: 1.875rem;
   font-weight: 700;
   color: #0f172a;
-}
-
-.badge {
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.badge.success {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.badge.warning {
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.badge.danger {
-  background: #fee2e2;
-  color: #991b1b;
 }
 
 .positive-change {

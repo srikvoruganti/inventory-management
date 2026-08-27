@@ -6,8 +6,15 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
+    reports: 'Reports',
     companyName: 'Catalyst Components',
-    subtitle: 'Inventory Management System'
+    subtitle: 'Inventory Management System',
+    primary: 'Primary',
+    openMenu: 'Open navigation menu',
+    closeMenu: 'Close navigation menu',
+    collapseSidebar: 'Collapse sidebar',
+    expandSidebar: 'Expand sidebar'
   },
 
   // Dashboard
@@ -126,6 +133,29 @@ export default {
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
+    },
+    submitted: {
+      title: 'Submitted Orders',
+      subtitle: 'Restock orders sent to suppliers',
+      empty: 'No restock orders have been submitted yet.',
+      status: 'Submitted',
+      submittedDate: 'Submitted',
+      itemCount: 'Items',
+      totalValue: 'Total Value',
+      leadTime: 'Delivery Lead Time',
+      expectedDelivery: 'Expected Delivery',
+      days: '{count} days',
+      viewItems: 'View line items',
+      hideItems: 'Hide line items',
+      lineItems: {
+        sku: 'SKU',
+        name: 'Item Name',
+        quantity: 'Qty',
+        unitCost: 'Unit Cost',
+        supplier: 'Supplier',
+        leadTime: 'Lead Time'
+      },
+      loadError: 'Failed to load submitted orders'
     }
   },
 
@@ -186,6 +216,68 @@ export default {
       trend: 'Trend',
       period: 'Period'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Allocate a purchase budget across forecast shortfalls',
+    budget: {
+      title: 'Purchase Budget',
+      label: 'Budget',
+      hint: 'Drag to set how much you are willing to spend this cycle.',
+      max: 'Max',
+      unused: 'Unused budget'
+    },
+    recommendations: {
+      title: 'Recommended Order',
+      subtitle: 'Ranked by forecast shortfall, largest first',
+      empty: 'The current budget is too low to cover even one unit of the highest-priority item.',
+      partial: 'Partial',
+      partialHint: 'Budget covered only part of this line.'
+    },
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      supplier: 'Supplier',
+      currentDemand: 'Current',
+      forecastDemand: 'Forecast',
+      shortfall: 'Shortfall',
+      quantity: 'Qty to Order',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time',
+      trend: 'Trend'
+    },
+    summary: {
+      itemsSelected: 'Items Selected',
+      totalUnits: 'Total Units',
+      totalCost: 'Total Cost',
+      unusedBudget: 'Unused Budget',
+      leadTime: 'Order Lead Time',
+      leadTimeHint: 'Slowest item in the shipment',
+      expectedDelivery: 'Expected delivery'
+    },
+    excluded: {
+      title: 'Not Recommended',
+      subtitle: 'Forecast items left out of this order, and why',
+      empty: 'Every forecast item is covered by the current budget.',
+      reason: 'Reason',
+      demandFalling: 'Demand falling',
+      overBudget: 'Over budget'
+    },
+    order: {
+      place: 'Place Order',
+      placing: 'Submitting...',
+      disabledReason: 'Increase the budget to select at least one item.',
+      successTitle: 'Order submitted',
+      successMessage: 'Order {orderNumber} was submitted successfully.',
+      expectedDelivery: 'Expected delivery',
+      viewOrders: 'View in Orders',
+      dismiss: 'Dismiss',
+      failed: 'Failed to submit order'
+    },
+    days: '{count} days'
   },
 
   // Filters
